@@ -1,0 +1,22 @@
+[project]
+name = "worktree-port-allocation-cli"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pyyaml>=6.0.3",
+]
+
+[project.scripts]
+wt-runtime = "main:main"
+
+[tool.setuptools]
+py-modules = [
+    "main",
+    "config",
+    "ports",
+    "runtime",
+    "state",
+    "worktrees",
+]
