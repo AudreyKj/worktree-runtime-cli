@@ -1,7 +1,7 @@
 [project]
 name = "worktree-port-allocation-cli"
 version = "0.1.0"
-description = "Add your description here"
+description = "A CLI that dynamically allocates ports and starts services for each Git worktree."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
