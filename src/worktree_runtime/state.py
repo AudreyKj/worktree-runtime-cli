@@ -3,6 +3,7 @@ from pathlib import Path
 
 STATE_FILE = Path(".worktree-runtime-state.json")
 
+
 def load_state():
     if not STATE_FILE.exists():
         return {}

@@ -1,5 +1,5 @@
-from pathlib import Path
 from collections.abc import Mapping
+from pathlib import Path
 import re
 
 import yaml

@@ -1,5 +1,6 @@
 import subprocess
 
+
 def detect_current_worktree():
     result = subprocess.run(
         ["git", "rev-parse", "--show-toplevel"],

@@ -27,7 +27,9 @@ def start_project(command, port, allocated_ports):
 
 
 def stop_projects(processes):
-    running_processes = [process for process in processes.values() if process.poll() is None]
+    running_processes = [
+        process for process in processes.values() if process.poll() is None
+    ]
     for process in running_processes:
         os.killpg(process.pid, signal.SIGTERM)
 

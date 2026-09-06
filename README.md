@@ -15,7 +15,19 @@ Running multiple Git worktrees locally often creates port conflicts.
 
 ## Install
 
-Install the CLI from a local checkout while developing it:
+Install the published CLI with `uv`:
+
+```sh
+uv tool install worktree-port-allocation-cli
+```
+
+Or with `pipx`:
+
+```sh
+pipx install worktree-port-allocation-cli
+```
+
+Install from a local checkout while developing it:
 
 ```sh
 uv tool install --force --editable /path/to/worktree-runtime-cli
@@ -29,6 +41,12 @@ wt-runtime
 
 `--editable` means changes to the local CLI source are used without another
 installation step.
+
+Check the installed version with:
+
+```sh
+wt-runtime --version
+```
 
 ## Configure a consumer project
 

@@ -1,22 +1,31 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "worktree-port-allocation-cli"
 version = "0.1.0"
 description = "A CLI that dynamically allocates ports and starts services for each Git worktree."
 readme = "README.md"
 requires-python = ">=3.11"
+license = "MIT"
+authors = [
+    { name = "AudreyKj", email = "audreykadjar@gmail.com" },
+]
 dependencies = [
     "pyyaml>=6.0.3",
 ]
 
+[project.urls]
+Homepage = "https://github.com/AudreyKj/worktree-runtime-cli"
+Repository = "https://github.com/AudreyKj/worktree-runtime-cli"
+Issues = "https://github.com/AudreyKj/worktree-runtime-cli/issues"
+
 [project.scripts]
-wt-runtime = "main:main"
+wt-runtime = "worktree_runtime.cli:main"
 
 [tool.setuptools]
-py-modules = [
-    "main",
-    "config",
-    "ports",
-    "runtime",
-    "state",
-    "worktrees",
-]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
