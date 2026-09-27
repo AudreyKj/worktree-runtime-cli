@@ -15,17 +15,27 @@ Running multiple Git worktrees locally often creates port conflicts.
 
 ## Install
 
-Install the published CLI with `uv`:
+Until the first PyPI release is published, install the CLI directly from
+GitHub with `uv`:
 
 ```sh
-uv tool install worktree-port-allocation-cli
+uv tool install git+https://github.com/AudreyKj/worktree-runtime-cli.git
 ```
 
 Or with `pipx`:
 
 ```sh
-pipx install worktree-port-allocation-cli
+pipx install git+https://github.com/AudreyKj/worktree-runtime-cli.git
 ```
+
+After the first PyPI release, the shorter published-package command will be:
+
+```sh
+uv tool install worktree-port-allocation-cli
+```
+
+Publication is tracked in
+[GitHub issue #1](https://github.com/AudreyKj/worktree-runtime-cli/issues/1).
 
 Install from a local checkout while developing it:
 
